@@ -1,0 +1,13 @@
+# Setup the environment:
+os: windows
+
+cache: bundler
+
+# Install required gems:
+install:
+  - gem install teapot --version "2.2.0"
+
+# Run tests:
+script:
+  - teapot fetch
+  - teapot build Test/Coroutine $TARGETS
